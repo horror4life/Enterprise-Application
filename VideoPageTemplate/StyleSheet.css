@@ -1,0 +1,17 @@
+﻿
+        table tr td{
+            border-top: 3px solid;
+            border-bottom: 3px solid;
+            padding-left: 2em;
+            padding-right: 2em;
+        }
+
+        div #footer p {
+            text-align: center;
+        }
+
+        .auto-style2 {
+            width: 200px;
+            height: 200px;
+            align-self: center;
+        }

@@ -5,83 +5,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
-        .auto-style1 {
-            width: 418px;
-            height: 131px;
-        }
-
-        table tr{
-        }
-
-        table tr td{
-            border-top: 3px solid;
-            border-bottom: 3px solid;
-            padding-left: 2em;
-            padding-right: 2em;
-        }
-
-        div #footer p {
-            text-align: center;
-        }
+        
     </style>
 </head>
 <body>
+    <asp:Label runat="server" Visible="true"><a href = "#" > Sign In </a></asp:Label><br />
+    <asp:Label runat="server" Visible="true"><a href = "#"> Register </a></asp:Label><br />
+
+    <asp:Label runat="server" Visible="false"><a href = "#"> Sign Out </a></asp:Label><br />
+    <asp:Label runat="server" Visible="false"><a href = "#"> Upload </a></asp:Label><br />
     <form id="form1" runat="server">
         <div>
-
-            <a href="#">
-                <img alt="TheNeedle" class="auto-style1" src="file:///G:/6th%20quarter/Enterprise%20Mobile%20apps/needle-159699_960_720.png" /></a>
-            <a href="#">Login</a>
-            <a href="#">Logout</a>
-            <a href="#">Register</a><br />
-            <hr />
-
-            <aside>
-                <a href="#">My Videos</a>
-                <a href="#">Upload Videos</a>
-                <a href="#">Edit Videos</a>
-            </aside>
-
-            <br />
-
-            <table>
-                <tr>
-                    <td><a href="#">Video Title</a></td>
-                    <td>Storytelling</td>
-                    <td>Cinematography</td>
-                    <td>Originality</td>
-                    <td>Dialogue</td>
-                    <td>Character Dev</td>
-                    <td>Ranking Overall</td>
-                </tr>
-                 <tr>
-                    <td><a href="#">Video Title</a></td>
-                    <td>Storytelling</td>
-                    <td>Cinematography</td>
-                    <td>Originality</td>
-                    <td>Dialogue</td>
-                    <td>Character Dev</td>
-                    <td>Ranking Overall</td>
-                </tr>
-                 <tr>
-                    <td><a href="#">Video Title</a></td>
-                    <td>Storytelling</td>
-                    <td>Cinematography</td>
-                    <td>Originality</td>
-                    <td>Dialogue</td>
-                    <td>Character Dev</td>
-                    <td>Ranking Overall</td>
-                </tr>
-            </table>
-            
+            <asp:Button ID="Button1" runat="server" Text="Full View" />
+            <asp:Label ID="videos" runat="server"></asp:Label>
         </div>
     </form>
-
-    <hr />
-
-    <div id="footer">
-        <p>Trademark Golden Needle Films 2017</p>
-    </div>
 </body>
 </html>
