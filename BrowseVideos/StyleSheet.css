@@ -1,0 +1,73 @@
+﻿
+        table tr td{
+            padding-left: 2em;
+            padding-right: 2em;
+        }
+
+        div #footer p {
+            text-align: center;
+        }
+
+        .auto-style2 {
+            width: 200px;
+            height: 200px;
+            align-self: center;
+        }
+
+        	
+	
+body 
+{
+    background-color: #006400;
+}
+#topNav
+{
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+}
+
+#topNav ul li
+{
+    text-align: left;
+    display:inline;
+    padding: 200px;
+}
+
+#topNav ul li a
+{
+    text-decoration: none;
+    color:black;
+}
+
+#topNav ul li a:hover
+{
+    text-decoration: none;
+    color:black;
+    color: #ccac00;
+}
+
+#topRightNav
+{
+    float:right;
+}
+
+#topRightNav ul li
+{
+    list-style-type: none;
+    margin-bottom: 25px;
+}
+
+#topRightNav ul li a
+{
+    color:black;
+    text-decoration: none;
+}
+
+#topRightNav ul li a:hover
+{
+    color: #ccac00;
+}
+
+video{
+    align-content: center;
+}
