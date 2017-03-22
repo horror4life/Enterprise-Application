@@ -71,3 +71,13 @@ body
 video{
     align-content: center;
 }
+
+hr{
+    color: #ccac00;
+}
+
+div #videoPadding{
+    
+    padding-top: 75px;
+    align-content: center;
+}

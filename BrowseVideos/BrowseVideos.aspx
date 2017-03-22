@@ -29,10 +29,14 @@
     </div>
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="videos" runat="server"></asp:Label>
-            <asp:Table ID="VideoTable" runat="server">
+            <div id="videoPadding">
+                <%--<asp:MultiView ID="MultiView1" runat="server"></asp:MultiView>--%>
 
-            </asp:Table>
+                <asp:Label ID="videos" runat="server"></asp:Label>
+
+                <asp:Table ID="VideoTable" runat="server" HorizontalAlign="Center"></asp:Table>
+
+            </div>
         </div>
     </form>
 </body>

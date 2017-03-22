@@ -8,8 +8,6 @@ using System.Data.SqlClient;
 
 public partial class BrowseVideos : System.Web.UI.Page
 {
-    private static bool loggedIn = false;
-    private static bool fullInfo = false;
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -19,28 +17,57 @@ public partial class BrowseVideos : System.Web.UI.Page
 
         }
 
+        string user = Request.QueryString["userID"];
+        user = "2";
+
+
         SqlConnection dbConnection = new SqlConnection("Data Source=stusql;Integrated Security=true");
         dbConnection.Open();
 
         try
         {
             dbConnection.ChangeDatabase("Emerald_Database");
-            string retString = " SELECT VIDEO_NAME, VIDEO_VIEWS, VIDEO_UPVOTES, VIDEO_DOWNVOTES, VIDEO_DATE, CAST(CAST(VIDEO_UPVOTES AS decimal) / (CAST(VIDEO_DOWNVOTES AS decimal) + CAST(VIDEO_UPVOTES AS decimal)) * 100 AS int) AS PERCENTAGE FROM VIDEO_DATA ORDER BY PERCENTAGE DESC";
+            
+            string vidCount = " SELECT COUNT(VIDEO_NAME) AS NUM_VIDEOS FROM VIDEO_DATA";
+            SqlCommand countVideos = new SqlCommand(vidCount, dbConnection);
+            SqlDataReader VideoNumber = countVideos.ExecuteReader();
+            int numberOfVideos = 0;
+            if(VideoNumber.Read())
+            {
+                numberOfVideos = Convert.ToInt16(VideoNumber["NUM_VIDEOS"]);
+            }
+            else
+            {
+                numberOfVideos = 0;
+            }
+            VideoNumber.Close();
+
+            View view = new View();
+            //MultiView1.Controls.Add(view);
+            
+
+            string retString = " SELECT VIDEO_ID, VIDEO_NAME, VIDEO_VIEWS, VIDEO_UPVOTES, VIDEO_DOWNVOTES, VIDEO_DATE, "
+                + "CAST(CAST(VIDEO_UPVOTES AS decimal) / (CAST(VIDEO_DOWNVOTES AS decimal) + CAST(VIDEO_UPVOTES AS decimal)) * 100 AS int) AS PERCENTAGE "
+                + "FROM VIDEO_DATA ORDER BY PERCENTAGE DESC";
             SqlCommand outlookCommand = new SqlCommand(retString, dbConnection);
             SqlDataReader outlookRecords = outlookCommand.ExecuteReader();
 
             if (outlookRecords.Read())
             {
                 videos.Text = ("");
+                //int i = 0;
                 do
                 {
+                    
+                    //Table VideoTable = new Table();
+
                     // the first row in the section of the table
                     TableRow nameRow = new TableRow();
                     TableCell name = new TableCell();
                     name.ColumnSpan = 2;
 
                     HyperLink link = new HyperLink();
-                    link.NavigateUrl = "VideoPage.aspx?vName=" + outlookRecords["VIDEO_NAME"];
+                    link.NavigateUrl = "VideoPage.aspx?vID=" + outlookRecords["VIDEO_ID"] + "&userID=" + user;
                     link.Text = outlookRecords["VIDEO_NAME"].ToString();
                     name.Controls.Add(link);
 
@@ -80,12 +107,15 @@ public partial class BrowseVideos : System.Web.UI.Page
                     breakPoint.Cells.Add(horizontalRule);
 
                     // Applying the rows to the table
+
                     VideoTable.Rows.Add(nameRow);
                     VideoTable.Rows.Add(voteRow);
                     VideoTable.Rows.Add(ratingRow);
                     VideoTable.Rows.Add(breakPoint);
 
                 } while (outlookRecords.Read());
+                
+                outlookRecords.Close();
             }
             else
             {
