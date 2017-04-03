@@ -8,6 +8,11 @@
     <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         
+        #footer {
+            top: 379px;
+            left: 566px;
+        }
+        
     </style>
 </head>
 <body>
@@ -30,7 +35,6 @@
     <form id="form1" runat="server">
         <div>
             <div id="videoPadding">
-                <%--<asp:MultiView ID="MultiView1" runat="server"></asp:MultiView>--%>
 
                 <asp:Label ID="videos" runat="server"></asp:Label>
 
@@ -40,7 +44,7 @@
         </div>
         
 
-    <div id="footer">
+    <div id="footer" style="display: block; position: absolute; z-index: auto">
         &copy Golden Needle Films
     </div>
     </form>

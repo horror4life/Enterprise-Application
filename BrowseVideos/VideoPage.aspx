@@ -8,6 +8,11 @@
     <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         
+        #footer {
+            top: 379px;
+            left: 566px;
+        }
+        
     </style>
 </head>
 <body>
@@ -66,7 +71,7 @@
             </div>
         </div>
 
-    <div id="footer">
+    <div id="footer" style="display: block; position: absolute; z-index: auto">
         &copy Golden Needle Films
     </div>
     </form>
