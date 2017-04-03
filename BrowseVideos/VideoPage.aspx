@@ -33,14 +33,42 @@
                 <asp:Label ID="videos" runat="server"></asp:Label>
                 <asp:Table ID="videoInfo" runat="server" HorizontalAlign="Center">
                 </asp:Table>
+
+                <asp:Table ID="Rankings" runat="server" HorizontalAlign="Center">
+                    <asp:TableRow>
+                        <asp:TableHeaderCell ID="storyTitle" runat="server"></asp:TableHeaderCell>
+                        <asp:TableHeaderCell ID="cineTitle" runat="server"></asp:TableHeaderCell>
+                        <asp:TableHeaderCell ID="originTitle" runat="server"></asp:TableHeaderCell>
+                        <asp:TableHeaderCell ID="diaTitle" runat="server"></asp:TableHeaderCell>
+                        <asp:TableHeaderCell ID="characterTitle" runat="server"></asp:TableHeaderCell>
+                    </asp:TableRow>
+                    <asp:TableRow>
+                        <asp:TableCell ID="story" runat="server"></asp:TableCell>
+                        <asp:TableCell ID="cine" runat="server"></asp:TableCell>
+                        <asp:TableCell ID="origin" runat="server"></asp:TableCell>
+                        <asp:TableCell ID="dia" runat="server"></asp:TableCell>
+                        <asp:TableCell ID="character" runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                </asp:Table>
+
+                    <asp:RadioButtonList ID="rankList" runat="server" RepeatDirection="Horizontal" Visible="false">
+                        <asp:ListItem Value="1">Storytelling</asp:ListItem>
+                        <asp:ListItem Value="2">Cinematography</asp:ListItem>
+                        <asp:ListItem Value="3">Originality</asp:ListItem>
+                        <asp:ListItem Value="4">Dialogue</asp:ListItem>
+                        <asp:ListItem Value="5">Character Development</asp:ListItem>
+                    </asp:RadioButtonList>
+                <asp:Button ID="submitRank" runat="server" Text="Submit" Visible="false" OnClientClick="sendRanks" />
                 
                 <asp:ImageButton ID="upVote" runat="server" src="images/upArrow.png" height="50" visible="False" OnClick="likeVideo" />
                 <asp:ImageButton ID="downVote" runat="server" src="images/downArrow.png" height="50" visible="False" OnClick="dislikeVideo" />
-                <%--<input type="image" src="images/upArrow.png" height="50" id="upVote" runat="server" alt="Upvote Video" visible="False" />--%>
-                <%--<input type="image" src="images/downArrow.png" height="50" id="downVote" runat="server" alt="Downvote Video" visible="False"   />--%>
 
             </div>
         </div>
+
+    <div id="footer">
+        &copy Golden Needle Films
+    </div>
     </form>
 </body>
 </html>

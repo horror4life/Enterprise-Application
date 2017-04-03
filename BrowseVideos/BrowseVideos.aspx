@@ -38,6 +38,11 @@
 
             </div>
         </div>
+        
+
+    <div id="footer">
+        &copy Golden Needle Films
+    </div>
     </form>
 </body>
 </html>
