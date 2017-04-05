@@ -1,0 +1,54 @@
+﻿body 
+{
+    background-color: #006400;
+}
+
+#topNav
+{
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+}
+
+#topNav ul li
+{
+    display:inline;
+    padding: 120px;
+}
+
+#topNav ul li a
+{
+    text-decoration: none;
+    color:black;
+}
+
+#topNav ul li a:hover
+{
+    color: #ccac00;
+}
+
+#topRightNav
+{
+    float: right;
+}
+
+#topRightNav ul li
+{
+    list-style-type: none;
+    margin-bottom: 25px;
+}
+
+#topRightNav ul li a
+{
+    text-decoration: none;
+    color:black;
+}
+
+#topRightNav ul li a:hover
+{
+    color: #ccac00;
+}
+
+table, th, td {
+    border-right: 1px black solid;
+    margin-left: 424px;
+}

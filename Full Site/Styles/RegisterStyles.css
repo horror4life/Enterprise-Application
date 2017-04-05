@@ -1,0 +1,68 @@
+﻿body 
+{
+    background-color: #006400;
+}
+
+.Fields
+{
+    width: 554px;
+    margin-left: 656px;
+}
+
+.SubButton 
+{
+    margin-left: 60px;
+}
+
+#topNav
+{
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+}
+
+#topNav ul li
+{
+    display:inline;
+    padding: 200px;
+}
+
+#topNav ul li a
+{
+    text-decoration: none;
+    color:black;
+}
+
+#topNav ul li a:hover
+{
+    text-decoration: none;
+    color:black;
+    color: #ccac00;
+}
+
+#topRightNav
+{
+    float:right;
+}
+
+#topRightNav ul li
+{
+    list-style-type: none;
+    margin-bottom: 25px;
+}
+
+#topRightNav ul li a
+{
+    color:black;
+    text-decoration: none;
+}
+
+#topRightNav ul li a:hover
+{
+    color: #ccac00;
+}
+
+#Footer
+{
+    margin-top: 150px;
+    margin-left: 650px;
+}
