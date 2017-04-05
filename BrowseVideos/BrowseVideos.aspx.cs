@@ -11,15 +11,16 @@ public partial class BrowseVideos : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!Page.IsPostBack)
-        {
-            //Button1.Click += new EventHandler(callMore);
-
-        }
 
         string user = Request.QueryString["userID"];
-        user = "2";
 
+        if(user != null)
+        {
+            Log.InnerText = "Log out";
+            Log.HRef = "BrowseVideos.aspx";
+            Reg.InnerText = "My Account";
+            //Reg.HRef = "MyAccount.aspx&userID=" + user;
+        }
 
         SqlConnection dbConnection = new SqlConnection("Data Source=stusql;Integrated Security=true");
         dbConnection.Open();
@@ -131,16 +132,4 @@ public partial class BrowseVideos : System.Web.UI.Page
 
     }
 
-
-    ///*
-    // * On Click event to get more rating information
-    // */
-    //void callMore(object sender, EventArgs e)
-    //{
-    //    if (fullInfo)
-    //        fullInfo = false;
-    //    else
-    //        fullInfo = true;
-
-    //}
 }

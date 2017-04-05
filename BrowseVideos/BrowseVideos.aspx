@@ -9,8 +9,10 @@
     <style type="text/css">
         
         #footer {
-            top: 379px;
-            left: 566px;
+            position: absolute;
+            bottom: 0px;
+            left: 40%;
+            right: 40%;
         }
         
     </style>
@@ -19,8 +21,8 @@
     <div class="Logo">
         <div id="topRightNav">
             <ul>
-                <li><a href="Login.aspx">Sign in</a></li>
-                <li><a href="Register.aspx">Register</a></li>
+                <li><a id="Log" href="Login.aspx" runat="server">Sign in</a></li>
+                <li><a id="Reg" href="Register.aspx" runat="server">Register</a></li>
             </ul>
         </div>
         <asp:Image ID="Logo" runat="server" ImageUrl="images/Golden Needle Films.png" />
@@ -44,7 +46,7 @@
         </div>
         
 
-    <div id="footer" style="display: block; position: absolute; z-index: auto">
+    <div id="footer" style="display: block; position: absolute; z-index: auto;">
         &copy Golden Needle Films
     </div>
     </form>

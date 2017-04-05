@@ -11,7 +11,7 @@ public partial class VideoPage : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
-        String vID = Request.QueryString["vID"];
+        string vID = Request.QueryString["vID"];
         string user = Request.QueryString["userID"];
 
         if (user != null)
@@ -51,11 +51,6 @@ public partial class VideoPage : System.Web.UI.Page
             if (outlookRecords.Read())
             {
                 videos.Text = ("");
-
-                //if (!Page.IsPostBack)
-                //{
-                //    int views = outlookRecords.V;
-                //}
                 do
                 {
 

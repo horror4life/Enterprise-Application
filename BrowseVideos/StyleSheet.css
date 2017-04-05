@@ -5,9 +5,9 @@
         }
 
         div #footer {
-            clear: right;
-            text-align: center;
-            align-content: center;
+            position: absolute;
+            bottom: 0px;
+            left: 557px;
         }
 
         .auto-style2 {

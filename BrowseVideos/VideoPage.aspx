@@ -9,10 +9,13 @@
     <style type="text/css">
         
         #footer {
-            top: 379px;
-            left: 566px;
+            bottom: 0;
+            top: auto;
+            left: auto;
+            right: auto;
+            align-content: center;
+            text-align: center;
         }
-        
     </style>
 </head>
 <body>
@@ -70,10 +73,11 @@
 
             </div>
         </div>
-
-    <div id="footer" style="display: block; position: absolute; z-index: auto">
+        
+    <div id="footer">
         &copy Golden Needle Films
     </div>
     </form>
-</body>
+
+    </body>
 </html>
